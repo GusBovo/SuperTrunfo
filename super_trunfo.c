@@ -12,15 +12,17 @@ int main()
   int num_pts_turisticos, num_pts_turisticos2;
 
   // -- Entrada de dados - Carta 1 --
-  printf("Adicione as informações da Carta 1 à seguir\n\
-  (Carta 1) Informe o Estado:\n");
+  printf("Adicione as informações da Carta 1 à seguir\n"
+  "(Carta 1) Informe o Estado:\n");
   scanf("%c", &estado);
 
   printf("(Carta 1) Informe o Código da Carta:\n");
-  scanf("%s", codigo_carta);
+  scanf("%2s", codigo_carta);
+  getchar();
 
   printf("(Carta 1) Informe o Nome da Cidade:\n");
-  scanf("%s", nome_cidade);
+  scanf("%[^\n]", nome_cidade);
+  getchar();
 
   printf("(Carta 1) Informe a População total:\n");
   scanf("%d", &populacao);
@@ -35,15 +37,17 @@ int main()
   scanf("%d", &num_pts_turisticos);
 
   // -- Entrada de dados - Carta 2 --
-  printf("\nAgora, adicione as informações da Carta 2 à seguir\n\
-  (Carta 2) Informe o Estado:\n");
+  printf("\nAgora, adicione as informações da Carta 2 à seguir\n"
+  "(Carta 2) Informe o Estado:\n");
   scanf("%c", &estado2);
 
   printf("(Carta 2) Informe o Código da Carta:\n");
-  scanf("%s", codigo_carta2);
+  scanf("%2s", codigo_carta2);
+  getchar();
 
   printf("(Carta 2) Informe o Nome da Cidade:\n");
-  scanf("%s", nome_cidade2);
+  scanf("%[^\n]", nome_cidade2);
+  getchar();
 
   printf("(Carta 2) Informe a População total:\n");
   scanf("%d", &populacao2);
@@ -60,12 +64,13 @@ int main()
   // -- Imprime Carta 1 --
   printf("\nCarta 1:\n"
     "Estado: %c\n"
-    "Código: %s\n"
+    "Código: %c%s\n"
     "Nome da Cidade: %s\n"
     "População: %d\n"
-    "Área (em km²): %f\n"
-    "PIB: %f\n"
+    "Área (em km²): %.2f\n"
+    "PIB: %.2f\n"
     "Número de Pontos Turísticos: %d\n",
+    estado,
     estado,
     codigo_carta,
     nome_cidade,
@@ -77,12 +82,13 @@ int main()
   // -- Imprime Carta 2 --
   printf("\nCarta 2:\n"
     "Estado: %c\n"
-    "Código: %s\n"
+    "Código: %c%s\n"
     "Nome da Cidade: %s\n"
     "População: %d\n"
-    "Área (em km²): %f\n"
-    "PIB: %f\n"
+    "Área (em km²): %.2f\n"
+    "PIB: %.2f\n"
     "Número de Pontos Turísticos: %d\n",
+    estado2,
     estado2,
     codigo_carta2,
     nome_cidade2,

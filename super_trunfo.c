@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define CLEAR_INPUT_BUFFER() scanf("%*[^\n]"); getchar()
+
 int main()
 {
 
@@ -15,51 +17,61 @@ int main()
   printf("Adicione as informações da Carta 1 à seguir\n"
   "(Carta 1) Informe o Estado:\n");
   scanf("%c", &estado);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe o Código da Carta:\n");
   scanf("%2s", codigo_carta);
-  getchar();
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe o Nome da Cidade:\n");
   scanf("%[^\n]", nome_cidade);
-  getchar();
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe a População total:\n");
   scanf("%d", &populacao);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe a Área total:\n");
   scanf("%f", &area);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe o PIB:\n");
   scanf("%f", &pib);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 1) Informe o Número de Pontos Turísticos:\n");
   scanf("%d", &num_pts_turisticos);
+  CLEAR_INPUT_BUFFER();
 
   // -- Entrada de dados - Carta 2 --
   printf("\nAgora, adicione as informações da Carta 2 à seguir\n"
   "(Carta 2) Informe o Estado:\n");
   scanf("%c", &estado2);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe o Código da Carta:\n");
   scanf("%2s", codigo_carta2);
-  getchar();
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe o Nome da Cidade:\n");
   scanf("%[^\n]", nome_cidade2);
-  getchar();
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe a População total:\n");
   scanf("%d", &populacao2);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe a Área total:\n");
   scanf("%f", &area2);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe o PIB:\n");
   scanf("%f", &pib2);
+  CLEAR_INPUT_BUFFER();
 
   printf("(Carta 2) Informe o Número de Pontos Turísticos:\n");
   scanf("%d", &num_pts_turisticos2);
+  CLEAR_INPUT_BUFFER();
 
   // -- Imprime Carta 1 --
   printf("\nCarta 1:\n"
@@ -96,7 +108,6 @@ int main()
     area2,
     pib2,
     num_pts_turisticos2);
-
 
   return 1;
 }
